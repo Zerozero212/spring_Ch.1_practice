@@ -1,26 +1,22 @@
 {{>layouts/header}}
-
-{{>layouts/header}}
-
+{{#member}}
 <table class="table">
     <thead>
     <tr>
         <th scope="col">Id</th>
-        <th scope="col">Title</th>
-        <th scope="col">Content</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
     </tr>
     </thead>
     <tbody>
-    {{#member}}
         <tr>
             <th>{{id}}</th>
             <td>{{email}}</td>
             <td>{{password}}</td>
         </tr>
-    {{/member}}
     </tbody>
 </table>
-
-{{>layouts/footer}}
-
+<a href="/members/{{id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/membersList">Go to member list</a>
+{{/member}}
 {{>layouts/footer}}
